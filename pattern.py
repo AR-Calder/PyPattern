@@ -30,8 +30,10 @@ def pattern_reverse(pattern):
 
 def main():
     if len(sys.argv) < 3 or sys.argv[1].lower() not in ['reverse', 'create']:
-        print("Usage: %s (reverse | create) <value> " % (sys.argv[0]))
+        print("Usage: %s (reverse | create) <value>" % (sys.argv[0]))
         exit(1)
+
+    # TODO add after x character in sequence make change (e.g. add memory address)
 
     arg1 = sys.argv[1].lower()
     arg2 = sys.argv[2]
