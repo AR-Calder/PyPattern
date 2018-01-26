@@ -37,7 +37,7 @@ def main():
     arg2 = sys.argv[2]
 
     if arg1 == 'create':
-        print(pattern_create(arg2))
+        print(pattern_create(int(arg2)))
     else:
         print(pattern_reverse(arg2))
 
