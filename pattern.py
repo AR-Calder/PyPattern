@@ -26,7 +26,7 @@ def pattern_create(length):
 
 def pattern_reverse(pattern):
     low = ['A', 'a', '0']
-    return ("position: %s" % (3 * ((((1 + ord(pattern[0]) - ord(low[0])) * 260) + ((1 + ord(pattern[1]) - ord(low[1])) * 10) + ((1 + ord(pattern[2]) - ord(low[2])) * 1)) - 270)))
+    return ("position: %s" % ((3 * ((((1 + ord(pattern[0]) - ord(low[0])) * 260) + ((1 + ord(pattern[1]) - ord(low[1])) * 10) + ((1 + ord(pattern[2]) - ord(low[2])) * 1)) - 270)) -3))
 
 def main():
     if len(sys.argv) < 3 or sys.argv[1].lower() not in ['reverse', 'create']:
@@ -34,7 +34,7 @@ def main():
         exit(1)
 
     arg1 = sys.argv[1].lower()
-    arg2 = int(sys.argv[2])
+    arg2 = sys.argv[2]
 
     if arg1 == 'create':
         print(pattern_create(arg2))
